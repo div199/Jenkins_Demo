@@ -14,7 +14,7 @@ app.get('/calculate/:num1/:num2/:oper',(request,response)=>{
 
 
     var x=calculate(Number(request.params.num1),Number(request.params.num2),request.params.oper)
-    console.log(request.params)
+    console.log(x)
     response.send(x.toString())
 	//response.send(request.params)
 
