@@ -5,7 +5,7 @@ const app=express()
 
 
 
-app.get('/test',(request,response)=>{
+app.get('/test1',(request,response)=>{
     
     console.log(request.params)
 	response.send('Hellow World')
