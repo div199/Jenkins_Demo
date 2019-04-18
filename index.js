@@ -26,7 +26,7 @@ app.get('/calculate/:num1/:num2/:oper',(request,response)=>{
 function calculate(num1,num2,oper) {
    
 	if(oper=='add')
-		return num1+num2*2;
+		return num1+num2*5;
     else if(oper=='sub')
 		return num1-num2;
 	else if(oper=='mod')
