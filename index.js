@@ -3,25 +3,23 @@ const express = require('express')
 //const bodyParser=require('body-parser')
 //app.use(express.bodyParser());
 
-const app=express()
+const app=express();
 
 
 
-app.post('/test1',(request,response)=>{
+app.post('/test1',function(request,response){
     
-    console.log(request)
-	response.send('Hellow World')
+    console.log(request);
+	response.send('Hellow World');
 })
 
 app.get('/calculate/:num1/:num2/:oper',(request,response)=>{
 
 
-    var x=calculate(Number(request.params.num1),Number(request.params.num2),request.params.oper)
-    console.log(x)
+   var x=calculate(Number(request.params.num1),Number(request.params.num2),request.params.oper)
     response.send(x.toString())
 	//response.send(request.params)
-})
- 
+}) 
 
 function calculate(num1,num2,oper) {
    
@@ -41,7 +39,7 @@ function calculate(num1,num2,oper) {
 	
 } 
 
-app.listen(5000,()=>{
-	console.log('Application listening at port 5000')
+app.listen(4500,function(){
+	console.log('Application listening at port 4500');
 })
 
