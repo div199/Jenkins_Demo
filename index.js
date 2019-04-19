@@ -1,13 +1,15 @@
 const http = require('http')
 const express = require('express')
+//const bodyParser=require('body-parser')
+//app.use(express.bodyParser());
 
 const app=express()
 
 
 
-app.get('/test1',(request,response)=>{
+app.post('/test1',(request,response)=>{
     
-    console.log(request.params)
+    console.log(request)
 	response.send('Hellow World')
 })
 
@@ -18,11 +20,8 @@ app.get('/calculate/:num1/:num2/:oper',(request,response)=>{
     console.log(x)
     response.send(x.toString())
 	//response.send(request.params)
-
-
-
 })
-
+ 
 
 function calculate(num1,num2,oper) {
    
@@ -42,7 +41,7 @@ function calculate(num1,num2,oper) {
 	
 } 
 
-app.listen(3000,()=>{
-	console.log('Application listening at port 3000')
+app.listen(5000,()=>{
+	console.log('Application listening at port 5000')
 })
 
